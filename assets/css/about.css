@@ -1,0 +1,168 @@
+/* About Page Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Hero Section */
+section:first-of-type {
+    background: linear-gradient(135deg, #6c5ce7, #a367dc);
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    margin-bottom: 60px;
+}
+
+section:first-of-type h1 {
+    font-size: 2.8em;
+    margin: 0;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Content Sections */
+section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+section:nth-child(odd) {
+    background-color: white;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section:nth-child(even) {
+    background-color: transparent;
+}
+
+/* Section Headers */
+section h1 {
+    color: #2d3436;
+    font-size: 2.4em;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+section h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #6c5ce7;
+    margin: 20px auto;
+    border-radius: 2px;
+}
+
+/* Section Content */
+section p {
+    color: #636e72;
+    font-size: 1.2em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Creator Section Special Styling */
+section:last-of-type {
+    background: linear-gradient(135deg, #6c5ce7, #a367dc);
+    color: white;
+    margin-top: 60px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section:last-of-type h1 {
+    color: white;
+}
+
+section:last-of-type h1::after {
+    background: white;
+}
+
+section:last-of-type p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    section:first-of-type {
+        padding: 80px 20px;
+    }
+
+    section:first-of-type h1 {
+        font-size: 2.2em;
+    }
+
+    section h1 {
+        font-size: 2em;
+    }
+
+    section p {
+        font-size: 1.1em;
+        padding: 0 20px;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section:first-of-type h1 {
+        font-size: 1.8em;
+    }
+
+    section h1 {
+        font-size: 1.6em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+}
+
+/* Hover Effects */
+section:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+/* Loading Animation */
+.loading {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

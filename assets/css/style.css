@@ -1,0 +1,280 @@
+html {
+    font-size: 1.51vw;
+}
+
+.topnav {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    overflow: hidden;
+    border: 0.1rem solid rgb(11, 88, 11);
+    padding: 0.2% 0% 0.2% 0%;
+}
+
+.topnav h1 {
+    float: left;
+    padding: 0.40vw;
+    border: none;
+    margin-top: 0%;
+    font-size: 1rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    color: rgb(8, 70, 8);
+    font-weight: bold;
+}
+
+
+.topnav a {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 1.06vw 1.21vw;
+    text-decoration: none;
+    font-size: .9rem;
+}
+
+.topnav a:hover {
+    text-decoration: underline;
+    color: rgb(8, 70, 8);
+}
+
+.topnav .view-more {
+    display: none;
+}
+
+.topnav .account {
+    float: right;
+    background-color: white;
+    min-height: 90%;
+    border: none;
+    color: black;
+}
+
+.topnav .account:hover{
+    cursor: pointer;
+}
+
+.downnav {
+    margin-top: 2%;
+    background-color: rgb(78, 76, 76);
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2%;
+}
+
+.downnav div{
+    border: white 0.1rem solid;
+    padding: 2%;
+}
+
+
+.downnav a {
+    color: white;
+    text-decoration: none;
+}
+
+.downnav a:hover {
+    text-decoration: underline;
+}
+
+.text-danger{
+    font-size: 70%;
+    color: red;
+    margin: 1% 0% 1% 0%;
+    padding: 1%;
+    font-weight: bold;
+}
+
+/* Tablet Media Query */
+@media screen and (max-width: 768px) {
+    html {
+        font-size:2vw;
+    }
+
+    .topnav h1 {
+        font-size: 1.7rem;
+    }
+    
+    .topnav .bar{
+        display: none;
+    }
+
+    .topnav {
+        display: grid;
+        grid-template-columns: 5fr 1fr;
+
+    }
+
+    .topnav .view-more {
+        background-color: white;
+        color: black;
+        display: inline;
+        float: right;
+        border: none;
+    }
+    
+    .topnav .view-more:hover{
+        cursor: pointer; 
+    }
+
+    .downnav {
+        grid-template-columns: 1fr;
+        font-size: 180%;
+    }
+
+}
+
+/* Mobile Media Query */
+@media screen and (max-width: 480px) {
+    html {
+        font-size:2vw;
+    }
+
+    .topnav h1 {
+        font-size: 1.7rem;
+    }
+    
+    .topnav .bar{
+        display: none;
+    }
+
+    .topnav {
+        display: grid;
+        grid-template-columns: 5fr 1fr;
+
+    }
+
+    .topnav .view-more {
+        background-color: white;
+        color: black;
+        display: inline;
+        float: right;
+        border: none;
+        max-height: 90%;
+    }
+    
+    .topnav .view-more:hover{
+        cursor: pointer; 
+    }
+    
+    .downnav {
+        grid-template-columns: 1fr;
+        font-size: 180%;
+    }
+}
+
+.account-container {
+    position: relative;
+}
+
+.account-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 7%;
+    box-shadow: 0 2% 7% rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.account-dropdown.show {
+    display: block;
+    margin: 1rem 2rem;
+    z-index: 1001;
+}
+
+.account-dropdown a {
+    display: block;
+    padding: 1% 2%;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.account-dropdown a:hover {
+    background-color: #f1f1f1;
+}
+
+.nav-modal {
+    position: fixed;
+    top: 4rem;
+    right: 1rem;
+    background-color: white;
+    border: 0.05rem solid #ddd;
+    border-radius: 0.5rem;
+    box-shadow: 0 1% 5% rgba(0,0,0,0.1);
+    z-index: 1000;
+    width: 90%;
+    display: none;
+}
+
+.nav-modal.show {
+    display: block;
+    animation: slideIn 0.3s ease-out;
+}
+
+.nav-modal a {
+    display: block;
+    padding: 1% 1.5%;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s ease;
+    border-bottom: 0.5rem solid #f1f1f1;
+}
+
+.nav-modal a:last-child {
+    border-bottom: none;
+}
+
+.nav-modal a:hover {
+    background-color: #f1f1f1;
+}
+
+.account-modal {
+    position: fixed;
+    top: 4rem;
+    right: 1rem;
+    background-color: white;
+    border: 0.05rem solid #ddd;
+    border-radius: 0.5rem;
+    box-shadow: 0 1% 5% rgba(0,0,0,0.1);
+    z-index: 1000;
+    width: 15%;
+    display: none;
+    animation: slideIn 0.3s ease-out;
+}
+
+.account-modal.show {
+    display: block;
+}
+
+.account-modal a {
+    display: block;
+    padding: 3% 6%;
+    text-decoration: none;
+    color: black;
+    border-bottom: 0.05rem solid #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+.account-modal a:last-child {
+    border-bottom: none;
+}
+
+.account-modal a:hover {
+    background-color: #f1f1f1;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

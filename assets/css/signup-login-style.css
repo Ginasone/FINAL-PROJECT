@@ -1,0 +1,91 @@
+/* Specific styles for signup and login pages */
+.signup-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px); /* Adjust based on header and footer heights */
+    background-color: #f9f5f0; /* Soft background color */
+    padding: 2rem;
+}
+
+.signup-login .form {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.signup-login .form h1 {
+    color: #FF3366; /* K-pop pink accent */
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.input-field {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+.input-field input:focus {
+    outline: none;
+    border-color: #FF3366;
+    box-shadow: 0 0 0 2px rgba(255, 51, 102, 0.2);
+}
+
+.button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #FF3366;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.button:hover {
+    background-color: #FF1A4D;
+}
+
+.switch-login-signup {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.switch-login-signup a {
+    color: #FF3366;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.switch-login-signup a:hover {
+    text-decoration: underline;
+}
+
+.text-danger {
+    color: #dc3545;
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 0.25rem;
+    text-align: left;
+}

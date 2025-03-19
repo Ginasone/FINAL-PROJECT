@@ -8,7 +8,7 @@
                 <a href="/FINAL PROJECT/view/news.php">K-pop News</a>
                 <a href="/FINAL PROJECT/view/contact-us.php">Contact Us</a>
                 <p>Find The Project on Github</p>
-                <a href="https://github.com/Ginasone/FINAL-PROJECT" class="github-link">https://github.com/Ginasone/FINAL-PROJECT</a>
+                <a href="https://github.com/sediaku/Web_Warriors_Travelsite.git" class="github-link">https://github.com/sediaku/Web_Warriors_Travelsite.git</a>
             </div>
         </div>
 

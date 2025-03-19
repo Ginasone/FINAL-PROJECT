@@ -18,7 +18,7 @@
         </section>
         <section>
             <h1>What is K-pop4Life?</h1>
-            <p>K-pop4Life is the website of the fans, by the fans, and for the fans. You have control over what appears on every page.</p>
+            <p>K-pop4Life is the website of the fans, by the fans, and for the fans.</p>
         </section>
         <section>
             <h1>Why Choose Us?</h1>

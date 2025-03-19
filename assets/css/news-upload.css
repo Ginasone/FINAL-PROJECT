@@ -1,70 +1,173 @@
-.news-upload {
-    max-width: 600px;
+/* news-upload.css */
+.upload-container {
+    max-width: 900px;
     margin: 2rem auto;
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 0 1rem;
 }
 
-.news-upload h1 {
+.upload-container h1 {
     text-align: center;
-    margin-bottom: 2rem;
-    color: var(--primary-color);
+    color: #2d3436;
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
 }
 
-.input-field {
+.upload-form {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 2rem;
+}
+
+/* Form Sections */
+.form-section {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 1rem;
+}
+
+.form-section h2 {
+    color: #6c5ce7;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+}
+
+/* Form Groups */
+.form-group {
     margin-bottom: 1.5rem;
 }
 
-.input-field label {
+.form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    font-weight: 600;
+    font-weight: 500;
+    color: #2d3436;
 }
 
-.input-field input, 
-.input-field textarea, 
-.input-field select {
+.form-group input[type="text"],
+.form-group input[type="url"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
     width: 100%;
-    padding: 0.75rem;
-    border: 1px solid var(--light-gray);
-    border-radius: 4px;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
     font-size: 1rem;
+    transition: border-color 0.3s ease;
 }
 
-.new-group-info {
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #6c5ce7;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.field-description {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Group Details */
+.group-details {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
 }
 
+/* New Group Section */
+#new_group_section {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+/* Submit Button */
 .submit-btn {
-    width: 100%;
-    padding: 1rem;
-    background-color: var(--primary-color);
+    background-color: #6c5ce7;
     color: white;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
     border: none;
-    border-radius: 4px;
-    font-size: 1rem;
+    border-radius: 6px;
     cursor: pointer;
+    width: 100%;
     transition: background-color 0.3s ease;
 }
 
 .submit-btn:hover {
-    background-color: #1557b0;
+    background-color: #5348c7;
 }
 
-#new-group-container {
-    background-color: var(--light-gray);
+/* Error and Success Messages */
+.error-message,
+.success-message {
     padding: 1rem;
-    border-radius: 4px;
-    margin-top: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
-.additional-group-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-top: 1rem;
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+}
+
+.success-message {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .upload-form {
+        padding: 1.5rem;
+    }
+    
+    .form-section h2 {
+        font-size: 1.4rem;
+    }
+    
+    .group-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.upload-form {
+    animation: fadeIn 0.4s ease-out;
 }

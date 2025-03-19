@@ -1,55 +1,196 @@
-.upload-form {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
+/* member-guide-upload.css */
+.upload-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
+.upload-container h1 {
+    text-align: center;
+    color: #2d3436;
+    margin-bottom: 1.5rem;
+}
+
+.upload-form {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 2rem;
+}
+
+/* Form Sections */
+.form-section {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.form-section:last-child {
+    border-bottom: none;
+    margin-bottom: 1rem;
+}
+
+.form-section h2 {
+    color: #6c5ce7;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+}
+
+/* Form Groups */
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #2d3436;
 }
 
-.form-group input,
+.form-group input[type="text"],
+.form-group input[type="date"],
 .form-group select,
 .form-group textarea {
     width: 100%;
-    padding: 8px;
+    padding: 0.8rem;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
 }
 
-.btn-primary {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
+.form-group input[type="file"] {
+    padding: 0.5rem 0;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #6c5ce7;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.file-requirements {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Member Forms */
+.member-form {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.member-form h3 {
+    color: #2d3436;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* Buttons */
+.add-member-btn,
+.remove-member-btn,
+.submit-btn {
+    padding: 0.8rem 1.5rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
+    font-size: 1rem;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.new-group-section {
-    background-color: #f0f0f0;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 5px;
+.add-member-btn {
+    background-color: #6c5ce7;
+    color: white;
+    margin-top: 1rem;
 }
 
-.member-inputs {
-    margin-top: 10px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
+.add-member-btn:hover {
+    background-color: #5849c4;
 }
 
-#memberContainer {
-    margin-top: 10px;
+.remove-member-btn {
+    background-color: #e74c3c;
+    color: white;
+    margin-top: 1rem;
 }
 
-.success-message { color: green; }
-.error-message { color: red; }
+.remove-member-btn:hover {
+    background-color: #c0392b;
+}
+
+.submit-btn {
+    background-color: #2ecc71;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #27ae60;
+}
+
+/* Image Preview */
+.image-preview {
+    margin: 1rem 0;
+    max-width: 100%;
+    min-height: 50px;
+}
+
+.image-preview img {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Messages */
+.error-message,
+.success-message {
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+}
+
+.success-message {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .upload-form {
+        padding: 1.5rem;
+    }
+    
+    .form-section h2 {
+        font-size: 1.4rem;
+    }
+    
+    .member-form {
+        padding: 1rem;
+    }
+}

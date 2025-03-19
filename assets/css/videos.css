@@ -1,37 +1,182 @@
-.container {
-    max-width: 1200px;
+/* videos.css - Main video listing page styles */
+.videos-container {
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 2rem 5%;
+    padding: 2rem 1rem;
 }
 
-.container h1 {
-    text-align: center;
+/* Search and Filters */
+.search-filter-section {
     margin-bottom: 2rem;
-    color: var(--primary-color);
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.video-grid {
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.search-bar {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    background: #6c5ce7;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.filter-group {
+    min-width: 200px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #4a4a4a;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 1rem;
+}
+
+/* Active Filters */
+.active-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.active-filters span {
+    font-weight: 500;
+    color: #4a4a4a;
+}
+
+.filter-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #6c5ce7;
+    color: white;
+    border-radius: 50px;
+    font-size: 0.9rem;
+}
+
+.filter-tag a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.clear-all-filters {
+    margin-left: auto;
+    color: #6c5ce7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Videos Grid */
+.videos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;
 }
 
 .video-card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background: white;
+    border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .video-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.video-card video {
+.video-thumbnail {
+    display: block;
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.thumbnail-container {
+    position: relative;
     width: 100%;
-    height: auto;
+    height: 100%;
+}
+
+.thumbnail-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(108, 92, 231, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-thumbnail:hover .play-icon {
+    opacity: 1;
 }
 
 .video-info {
@@ -39,32 +184,121 @@
 }
 
 .video-info h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    margin: 0 0 0.8rem;
+    font-size: 1.1rem;
+    line-height: 1.4;
 }
 
-.video-info p {
-    color: var(--dark-gray);
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-}
-
-.download-btn {
-    display: inline-flex;
-    align-items: center;
-    background-color: var(--accent-color);
-    color: white;
-    padding: 0.5rem 1rem;
+.video-info h3 a {
+    color: #2d3436;
     text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.video-info h3 a:hover {
+    color: #6c5ce7;
+}
+
+.video-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.group-link {
+    color: #6c5ce7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.video-type {
+    background-color: #f1f1f1;
+    padding: 0.2rem 0.6rem;
     border-radius: 4px;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease;
+    color: #4a4a4a;
 }
 
-.download-btn:hover {
-    background-color: #c22b1a;
+.video-uploader {
+    display: flex;
+    justify-content: space-between;
+    color: #636e72;
+    font-size: 0.85rem;
 }
 
-.download-btn i {
-    margin-right: 0.5rem;
+.upload-date {
+    color: #7f8c8d;
 }
+
+/* No Videos Message */
+.no-videos-message {
+    text-align: center;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 8px;
+    grid-column: 1 / -1;
+}
+
+.no-videos-message h3 {
+    color: #2d3436;
+    margin-bottom: 1rem;
+}
+
+.no-videos-message p {
+    color: #636e72;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .videos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .search-filter-section {
+        padding: 1rem;
+    }
+    
+    .search-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-bar {
+        width: 100%;
+    }
+    
+    .filters {
+        width: 100%;
+    }
+    
+    .filter-group {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .videos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.video-card {
+    animation: fadeIn 0.5s ease-out forwards;
+    animation-delay: calc(var(--i, 0) * 0.1s);
+}
+
